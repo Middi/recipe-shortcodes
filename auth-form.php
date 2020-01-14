@@ -12,11 +12,11 @@ function r_recipe_auth_form_shortcode(){
     wp_nonce_field( 'recipe_auth', '_wpnonce', true, false ),
     $formHTML
   );
-//   $formHTML               = str_replace(
-//     'SHOW_REG_FORM',
-//     ( !get_option('users_can_register') ? 'style="display:none;"' : ''),
-//     $formHTML
-//   );
+  $formHTML               = str_replace(
+    'SHOW_REG_FORM',
+    ( !get_option('users_can_register') ? 'style="display:none;"' : ''),
+    $formHTML
+  );
 
   return $formHTML;
 }
